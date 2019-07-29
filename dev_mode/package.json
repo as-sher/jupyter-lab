@@ -60,6 +60,7 @@
     "@jupyterlab/terminal-extension": "^1.0.1",
     "@jupyterlab/theme-dark-extension": "^1.0.1",
     "@jupyterlab/theme-light-extension": "^1.0.1",
+    "@jupyterlab/theme-xcatalyst-extension": "^1.0.1",
     "@jupyterlab/tooltip": "^1.0.1",
     "@jupyterlab/tooltip-extension": "^1.0.1",
     "@jupyterlab/vdom-extension": "^1.0.1",
@@ -150,6 +151,7 @@
       "@jupyterlab/terminal-extension": "",
       "@jupyterlab/theme-dark-extension": "",
       "@jupyterlab/theme-light-extension": "",
+      "@jupyterlab/theme-xcatalyst-extension": "",
       "@jupyterlab/tooltip-extension": "",
       "@jupyterlab/vdom-extension": ""
     },
@@ -287,6 +289,7 @@
       "@jupyterlab/terminal-extension": "../packages/terminal-extension",
       "@jupyterlab/theme-dark-extension": "../packages/theme-dark-extension",
       "@jupyterlab/theme-light-extension": "../packages/theme-light-extension",
+      "@jupyterlab/theme-xcatalyst-extension": "../packages/theme-xcatalyst-extension",
       "@jupyterlab/tooltip": "../packages/tooltip",
       "@jupyterlab/tooltip-extension": "../packages/tooltip-extension",
       "@jupyterlab/ui-components": "../packages/ui-components",

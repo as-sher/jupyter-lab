@@ -205,6 +205,9 @@
       "path": "../theme-light-extension"
     },
     {
+      "path": "../theme-xcatalyst-extension"
+    },
+    {
       "path": "../tooltip"
     },
     {
