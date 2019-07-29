@@ -4,3 +4,22 @@
 |----------------------------------------------------------------------------*/
 
 @import url('~@jupyterlab/apputils/style/index.css');
+.jp-setting {
+  width: 100%;
+}
+
+.jp-setting ul li:last-child {
+  position: absolute;
+  right: 0px;
+}
+
+.setting-icon {
+  background-image: var(--jp-icon-settings);
+  height: 25px;
+  width: 25px;
+}
+
+.setting-menu {
+  right: 0px;
+  left: unset !important;
+}

@@ -19,6 +19,7 @@ export class SettingsMenu extends JupyterLabMenu implements ISettingsMenu {
    */
   constructor(options: Menu.IOptions) {
     super(options);
-    this.menu.title.label = 'Settings';
+    this.menu.title.iconClass = 'setting-icon';
+    this.menu.addClass('setting-menu');
   }
 }
