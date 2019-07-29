@@ -60,6 +60,7 @@
     "@jupyterlab/terminal-extension": "^1.0.2",
     "@jupyterlab/theme-dark-extension": "^1.0.2",
     "@jupyterlab/theme-light-extension": "^1.0.2",
+    "@jupyterlab/theme-xcatalyst-extension": "^1.0.1",
     "@jupyterlab/tooltip": "^1.0.2",
     "@jupyterlab/tooltip-extension": "^1.0.2",
     "@jupyterlab/vdom-extension": "^1.0.2",
