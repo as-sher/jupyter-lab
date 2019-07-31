@@ -383,4 +383,5 @@ all of MD as it is not optimized for dense, information rich UIs.
   --x-layout-color1: #3c6478;
   --x-layout-color2: #232f3e;
   --x-sidebar-color: #f8f8f8;
+  --x-sidebar-coloor-hover: #1d1d1d1a;
 }

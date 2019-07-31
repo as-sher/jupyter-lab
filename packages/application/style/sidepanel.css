@@ -77,7 +77,7 @@
 }
 
 .jp-SideBar .p-TabBar-tab:hover:not(.p-mod-current) {
-  background: var(--jp-layout-color1);
+  background: var(--x-sidebar-coloor-hover);
 }
 
 /* Left */

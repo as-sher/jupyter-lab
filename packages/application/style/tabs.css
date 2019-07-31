@@ -50,7 +50,8 @@
   margin-left: calc(-1 * var(--jp-border-width));
   line-height: var(--jp-private-horizontal-tab-height);
   padding: 0px 8px;
-  background: var(--jp-layout-color2);
+  color: var(--jp-layout-color1);
+  background: var(--x-layout-color1);
   border: var(--jp-border-width) solid var(--jp-border-color1);
   border-bottom: none;
   position: relative;
@@ -58,6 +59,7 @@
 
 .p-DockPanel-tabBar .p-TabBar-tab:hover:not(.p-mod-current) {
   background: var(--jp-layout-color1);
+  color: var(--jp-content-font-color0);
 }
 
 .p-DockPanel-tabBar .p-TabBar-tab:first-child {
@@ -66,8 +68,8 @@
 
 /* This is a current tab of a tab bar in the dock panel: each tab bar has 1. */
 .p-DockPanel-tabBar .p-TabBar-tab.p-mod-current {
-  background: var(--jp-layout-color1);
-  color: var(--jp-ui-font-color0);
+  background: var(--x-layout-color2);
+  color: var(--jp-layout-color1);
   min-height: calc(
     var(--jp-private-horizontal-tab-height) + 2 * var(--jp-border-width)
   );
@@ -92,7 +94,7 @@
 }
 
 .p-TabBar-tab.p-mod-current:hover {
-  background: var(--jp-layout-color1);
+  color: var(--jp-layout-color1);
 }
 
 .p-DockPanel-tabBar .p-TabBar.p-mod-left .p-TabBar-tab,

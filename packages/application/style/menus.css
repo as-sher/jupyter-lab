@@ -18,7 +18,7 @@
 
 .p-MenuBar {
   padding-left: 5px;
-  /* background: var(--jp-layout-color1); */
+  background: var(--jp-layout-color2);
   color: var(--jp-ui-font-color1);
   font-size: var(--jp-ui-font-size1);
 }
