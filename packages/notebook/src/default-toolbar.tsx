@@ -127,6 +127,294 @@ export namespace ToolbarItems {
   }
 
   /**
+   * Create an insert undo cell operation toolbar item.
+   */
+  export function createUndoCellOperationButton(panel: NotebookPanel): Widget {
+    return new ToolbarButton({
+      iconClassName: TOOLBAR_INSERT_CLASS,
+      onClick: () => {
+        NotebookActions.undo(panel.content);
+      },
+      tooltip: 'Undo Cell Operation Button'
+    });
+  }
+
+  /**
+   * Create an insert redo cell operation toolbar item.
+   */
+  export function createRedoCellOperationButton(panel: NotebookPanel): Widget {
+    return new ToolbarButton({
+      iconClassName: TOOLBAR_INSERT_CLASS,
+      onClick: () => {
+        NotebookActions.redo(panel.content);
+      },
+      tooltip: 'Redo Cell Operation Button'
+    });
+  }
+
+  /**
+   * Create an insert select all cell operation toolbar item.
+   */
+  export function createSelectAllCellOperationButton(
+    panel: NotebookPanel
+  ): Widget {
+    return new ToolbarButton({
+      iconClassName: TOOLBAR_INSERT_CLASS,
+      onClick: () => {
+        NotebookActions.selectAll(panel.content);
+      },
+      tooltip: 'Select All Cell Operation Button'
+    });
+  }
+
+  /**
+   * Create an insert deselect all cell operation toolbar item.
+   */
+  export function createDeselectAllCellOperationButton(
+    panel: NotebookPanel
+  ): Widget {
+    return new ToolbarButton({
+      iconClassName: TOOLBAR_INSERT_CLASS,
+      onClick: () => {
+        NotebookActions.deselectAll(panel.content);
+      },
+      tooltip: 'Deselect All Cell Operation Button'
+    });
+  }
+
+  /**
+   * Create an insert delete cell operation toolbar item.
+   */
+  export function createDeleteCellsOperationButton(
+    panel: NotebookPanel
+  ): Widget {
+    return new ToolbarButton({
+      iconClassName: TOOLBAR_INSERT_CLASS,
+      onClick: () => {
+        NotebookActions.deleteCells(panel.content);
+      },
+      tooltip: 'Delete Selected Cell Operation Button'
+    });
+  }
+
+  /**
+   * Create an insert move up cell operation toolbar item.
+   */
+  export function createMoveUpCellsOperationButton(
+    panel: NotebookPanel
+  ): Widget {
+    return new ToolbarButton({
+      iconClassName: TOOLBAR_INSERT_CLASS,
+      onClick: () => {
+        NotebookActions.moveUp(panel.content);
+      },
+      tooltip: 'Move Up Selected Cell Operation Button'
+    });
+  }
+
+  /**
+   * Create an insert move down cell operation toolbar item.
+   */
+  export function createMoveDownCellsOperationButton(
+    panel: NotebookPanel
+  ): Widget {
+    return new ToolbarButton({
+      iconClassName: TOOLBAR_INSERT_CLASS,
+      onClick: () => {
+        NotebookActions.moveDown(panel.content);
+      },
+      tooltip: 'Move Down Selected Cell Operation Button'
+    });
+  }
+
+  /**
+   * Create an insert split cell operation toolbar item.
+   */
+  export function createSplitCellsOperationButton(
+    panel: NotebookPanel
+  ): Widget {
+    return new ToolbarButton({
+      iconClassName: TOOLBAR_INSERT_CLASS,
+      onClick: () => {
+        NotebookActions.splitCell(panel.content);
+      },
+      tooltip: 'Split Selected Cell Operation Button'
+    });
+  }
+
+  /**
+   * Create an insert merge cell operation toolbar item.
+   */
+  export function createMergeCellsOperationButton(
+    panel: NotebookPanel
+  ): Widget {
+    return new ToolbarButton({
+      iconClassName: TOOLBAR_INSERT_CLASS,
+      onClick: () => {
+        NotebookActions.mergeCells(panel.content);
+      },
+      tooltip: 'Merge Selected Cell Operation Button'
+    });
+  }
+
+  /**
+   * Create an insert clear Outputs operation toolbar item.
+   */
+  export function creatClearOutputOperationButton(
+    panel: NotebookPanel
+  ): Widget {
+    return new ToolbarButton({
+      iconClassName: TOOLBAR_INSERT_CLASS,
+      onClick: () => {
+        NotebookActions.clearOutputs(panel.content);
+      },
+      tooltip: 'Clear Output Operation Button'
+    });
+  }
+
+  /**
+   * Create an insert clear All Outputs operation toolbar item.
+   */
+  export function creatClearAllOutputOperationButton(
+    panel: NotebookPanel
+  ): Widget {
+    return new ToolbarButton({
+      iconClassName: TOOLBAR_INSERT_CLASS,
+      onClick: () => {
+        NotebookActions.clearAllOutputs(panel.content);
+      },
+      tooltip: 'Clear All Output Operation Button'
+    });
+  }
+
+  /**
+   * Create an hide code operation toolbar item.
+   */
+  export function creatHideCodeOperationButton(panel: NotebookPanel): Widget {
+    return new ToolbarButton({
+      iconClassName: TOOLBAR_INSERT_CLASS,
+      onClick: () => {
+        NotebookActions.hideCode(panel.content);
+      },
+      tooltip: 'Hide Code Operation Button'
+    });
+  }
+
+  /**
+   * Create an hide all code operation toolbar item.
+   */
+  export function creatHideAllCodeOperationButton(
+    panel: NotebookPanel
+  ): Widget {
+    return new ToolbarButton({
+      iconClassName: TOOLBAR_INSERT_CLASS,
+      onClick: () => {
+        NotebookActions.hideAllCode(panel.content);
+      },
+      tooltip: 'Hide All code Operation Button'
+    });
+  }
+
+  /**
+   * Create an show code operation toolbar item.
+   */
+  export function creatShowCodeOperationButton(panel: NotebookPanel): Widget {
+    return new ToolbarButton({
+      iconClassName: TOOLBAR_INSERT_CLASS,
+      onClick: () => {
+        NotebookActions.showCode(panel.content);
+      },
+      tooltip: 'Show Code Operation Button'
+    });
+  }
+
+  /**
+   * Create an show all code operation toolbar item.
+   */
+  export function creatShowAllCodeOperationButton(
+    panel: NotebookPanel
+  ): Widget {
+    return new ToolbarButton({
+      iconClassName: TOOLBAR_INSERT_CLASS,
+      onClick: () => {
+        NotebookActions.showAllCode(panel.content);
+      },
+      tooltip: 'Show All code Operation Button'
+    });
+  }
+
+  /**
+   * Create an hide output operation toolbar item.
+   */
+  export function creatHideOutputOperationButton(panel: NotebookPanel): Widget {
+    return new ToolbarButton({
+      iconClassName: TOOLBAR_INSERT_CLASS,
+      onClick: () => {
+        NotebookActions.hideOutput(panel.content);
+      },
+      tooltip: 'Hide Output Operation Button'
+    });
+  }
+
+  /**
+   * Create an hide all output operation toolbar item.
+   */
+  export function creatHideAllOutputOperationButton(
+    panel: NotebookPanel
+  ): Widget {
+    return new ToolbarButton({
+      iconClassName: TOOLBAR_INSERT_CLASS,
+      onClick: () => {
+        NotebookActions.hideAllOutputs(panel.content);
+      },
+      tooltip: 'Hide All Output Operation Button'
+    });
+  }
+
+  /**
+   * Create an show output operation toolbar item.
+   */
+  export function creatShowOutputOperationButton(panel: NotebookPanel): Widget {
+    return new ToolbarButton({
+      iconClassName: TOOLBAR_INSERT_CLASS,
+      onClick: () => {
+        NotebookActions.showOutput(panel.content);
+      },
+      tooltip: 'show Output Operation Button'
+    });
+  }
+
+  /**
+   * Create an show all output operation toolbar item.
+   */
+  export function creatshowAllOutputOperationButton(
+    panel: NotebookPanel
+  ): Widget {
+    return new ToolbarButton({
+      iconClassName: TOOLBAR_INSERT_CLASS,
+      onClick: () => {
+        NotebookActions.showAllOutputs(panel.content);
+      },
+      tooltip: 'show All Output Operation Button'
+    });
+  }
+
+  /**
+   * Create an toggle numbering operation toolbar item.
+   */
+  export function creatToggleNumberingOperationButton(
+    panel: NotebookPanel
+  ): Widget {
+    return new ToolbarButton({
+      iconClassName: TOOLBAR_INSERT_CLASS,
+      onClick: () => {
+        NotebookActions.toggleAllLineNumbers(panel.content);
+      },
+      tooltip: 'Toggle All Numbering Operation Button'
+    });
+  }
+
+  /**
    * Create a cut toolbar item.
    */
   export function createCutButton(panel: NotebookPanel): Widget {
@@ -204,6 +492,86 @@ export namespace ToolbarItems {
       { name: 'insert', widget: createInsertButton(panel) },
       { name: 'cut', widget: createCutButton(panel) },
       { name: 'copy', widget: createCopyButton(panel) },
+      {
+        name: 'undoCellOperation',
+        widget: createUndoCellOperationButton(panel)
+      },
+      {
+        name: 'redoCellOperation',
+        widget: createRedoCellOperationButton(panel)
+      },
+      {
+        name: 'selectAllCellOperation',
+        widget: createSelectAllCellOperationButton(panel)
+      },
+      {
+        name: 'deselectAllCellOperation',
+        widget: createDeselectAllCellOperationButton(panel)
+      },
+      {
+        name: 'deletCellsOperation',
+        widget: createDeleteCellsOperationButton(panel)
+      },
+      {
+        name: 'moveUpCell',
+        widget: createMoveUpCellsOperationButton(panel)
+      },
+      {
+        name: 'moveDownCell',
+        widget: createMoveDownCellsOperationButton(panel)
+      },
+      {
+        name: 'splitCell',
+        widget: createSplitCellsOperationButton(panel)
+      },
+      {
+        name: 'mergeCell',
+        widget: createMergeCellsOperationButton(panel)
+      },
+      {
+        name: 'clearOutput',
+        widget: creatClearOutputOperationButton(panel)
+      },
+      {
+        name: 'clearAllOutput',
+        widget: creatClearAllOutputOperationButton(panel)
+      },
+      {
+        name: 'hideCode',
+        widget: creatHideCodeOperationButton(panel)
+      },
+      {
+        name: 'showCode',
+        widget: creatShowCodeOperationButton(panel)
+      },
+      {
+        name: 'hideAllCode',
+        widget: creatHideAllCodeOperationButton(panel)
+      },
+      {
+        name: 'showAllCode',
+        widget: creatShowAllCodeOperationButton(panel)
+      },
+      {
+        name: 'hideOutput',
+        widget: creatHideOutputOperationButton(panel)
+      },
+      {
+        name: 'showOutput',
+        widget: creatShowOutputOperationButton(panel)
+      },
+      {
+        name: 'hideAllOutput',
+        widget: creatHideAllOutputOperationButton(panel)
+      },
+      {
+        name: 'showAllOutput',
+        widget: creatshowAllOutputOperationButton(panel)
+      },
+      {
+        name: 'toggleNumbering',
+        widget: creatToggleNumberingOperationButton(panel)
+      },
       { name: 'paste', widget: createPasteButton(panel) },
       { name: 'run', widget: createRunButton(panel) },
       {
