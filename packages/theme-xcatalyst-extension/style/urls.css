@@ -109,4 +109,35 @@
   --jp-icon-vega: url('icons/jupyter/vega.svg');
   --jp-icon-yaml-selected: url('icons/jupyter/yml_selected.svg');
   --jp-icon-yaml: url('icons/jupyter/yml.svg');
+
+  --x-icon-undo: url('icons/md/x_undo.svg');
+  --x-icon-redo: url('icons/md/x_redo.svg');
+  --x-icon-undo-cell: url('icons/md/undo-cell.svg');
+  --x-icon-redo-cell: url('icons/md/redo-cell.svg');
+  --x-icon-toggle-numbering: url('icons/md/toggle-numbering.svg');
+
+  --x-icon-select-all: url('icons/md/select-all.svg');
+  --x-icon-deselect-all: url('icons/md/deselect-all.svg');
+  --x-icon-move-up: url('icons/md/move-up.svg');
+  --x-icon-move-down: url('icons/md/move-down.svg');
+  --x-icon-delete: url('icons/md/delete.svg');
+
+  --x-icon-clear-output: url('icons/md/clear.svg');
+  --x-icon-clear-all-output: url('icons/md/clear-all.svg');
+  --x-icon-split: url('icons/md/split.svg');
+  --x-icon-merge: url('icons/md/merge.svg');
+
+  --x-icon-show-code: url('icons/md/show-code.svg');
+  --x-icon-hide-code: url('icons/md/hide-code.svg');
+  --x-icon-show-all-code: url('icons/md/show-all-code.svg');
+  --x-icon-hide-all-code: url('icons/md/hide-all-code.svg');
+
+  --x-icon-show-output: url('icons/md/show-output.svg');
+  --x-icon-hide-output: url('icons/md/hide-output.svg');
+  --x-icon-show-all-output: url('icons/md/show-all-output.svg');
+  --x-icon-hide-all-output: url('icons/md/hide-all-output.svg');
+
+  /* 
+  --x-icon-undo-cell: url('icons/md/undo-cell.svg');
+  --x-icon-undo-cell: url('icons/md/undo-cell.svg'); */
 }

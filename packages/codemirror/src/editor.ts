@@ -320,6 +320,7 @@ export class CodeMirrorEditor implements CodeEditor.IEditor {
    * Undo one edit (if any undo events are stored).
    */
   undo(): void {
+    console.log('editor');
     this.doc.undo();
   }
 
@@ -327,6 +328,7 @@ export class CodeMirrorEditor implements CodeEditor.IEditor {
    * Redo one undone edit.
    */
   redo(): void {
+    console.log('editor');
     this.doc.redo();
   }
 

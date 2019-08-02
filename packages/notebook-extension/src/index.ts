@@ -1940,9 +1940,11 @@ function populateMenus(
   mainMenu.editMenu.undoers.add({
     tracker,
     undo: widget => {
+      console.log('editmenu');
       widget.content.activeCell.editor.undo();
     },
     redo: widget => {
+      console.log('editmenu');
       widget.content.activeCell.editor.redo();
     }
   } as IEditMenu.IUndoer<NotebookPanel>);

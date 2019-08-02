@@ -260,3 +260,91 @@
 .jp-VegaIcon {
   background-image: var(--jp-icon-vega);
 }
+
+.x-Undo {
+  background-image: var(--x-icon-undo);
+}
+
+.x-Redo {
+  background-image: var(--x-icon-redo);
+}
+
+.x-Undo-Cell {
+  background-image: var(--x-icon-undo-cell);
+}
+
+.x-Redo_Cell {
+  background-image: var(--x-icon-redo-cell);
+}
+
+.x-Select-All {
+  background-image: var(--x-icon-select-all);
+}
+
+.x-Deselect-All {
+  background-image: var(--x-icon-deselect-all);
+}
+
+.x-Move-Up {
+  background-image: var(--x-icon-move-up);
+}
+
+.x-Move-Down {
+  background-image: var(--x-icon-move-down);
+}
+
+.x-Delete {
+  background-image: var(--x-icon-delete);
+}
+
+.x-Clear-Output {
+  background-image: var(--x-icon-clear-output);
+}
+
+.x-Clear-All-Output {
+  background-image: var(--x-icon-clear-all-output);
+}
+
+.x-Split {
+  background-image: var(--x-icon-split);
+}
+
+.x-Merge {
+  background-image: var(--x-icon-merge);
+}
+
+.x-Show-Output {
+  background-image: var(--x-icon-show-output);
+}
+
+.x-Hide-Output {
+  background-image: var(--x-icon-hide-output);
+}
+
+.x-Show-All-Output {
+  background-image: var(--x-icon-show-all-output);
+}
+
+.x-Hide-All-Output {
+  background-image: var(--x-icon-hide-all-output);
+}
+
+.x-Show-Code {
+  background-image: var(--x-icon-show-code);
+}
+
+.x-Hide-Code {
+  background-image: var(--x-icon-hide-code);
+}
+
+.x-Show-All-Code {
+  background-image: var(--x-icon-show-all-code);
+}
+
+.x-Hide-All-Code {
+  background-image: var(--x-icon-hide-all-code);
+}
+
+.x-Toggle-Numbering {
+  background-image: var(--x-icon-toggle-numbering);
+}

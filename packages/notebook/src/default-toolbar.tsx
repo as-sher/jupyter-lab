@@ -33,6 +33,30 @@ import { Notebook } from './widget';
  */
 const TOOLBAR_SAVE_CLASS = 'jp-SaveIcon';
 
+const X_UNDO = 'x-Undo';
+const X_REDO = 'x-Redo';
+const X_UNDO_CELL = 'x-Undo-Cell';
+const X_REDO_CELL = 'x-Redo_Cell';
+const X_TOGGLE_NUMBERING = 'x-Toggle-Numbering';
+const X_CLEAR_OUTPUT = 'x-Clear-Output';
+const X_CLEAR_ALL_OUTPUT = 'x-Clear-All-Output';
+const X_SPLIT = 'x-Split';
+const X_MERGE = 'x-Merge';
+const X_SHOW_CODE = 'x-Show-Code';
+const X_HIDE_CODE = 'x-Hide-Code';
+const X_SHOW_ALL_CODE = 'x-Show-All-Code';
+const X_HIDE_ALL_CODE = 'x-Hide-All-Code';
+const X_SHOW_OUTPUT = 'x-Show-Output';
+const X_HIDE_OUTPUT = 'x-Hide-Output';
+const X_SHOW_ALL_OUTPUT = 'x-Show-All-Output';
+const X_HIDE_ALL_OUTPUT = 'x-Hide-All-Output';
+
+const X_SELECT_ALL = 'x-Select-All';
+const X_DESELECT_ALL = 'x-Deselect-All';
+const X_MOVE_UP = 'x-Move-Up';
+const X_MOVE_DOWN = 'x-Move-Down';
+const X_DELETE = 'x-Delete';
+
 /**
  * The class name added to toolbar insert button.
  */
@@ -127,11 +151,37 @@ export namespace ToolbarItems {
   }
 
   /**
+   * Create an insert undo operation toolbar item.
+   */
+  export function createUndoOperationButton(panel: NotebookPanel): Widget {
+    return new ToolbarButton({
+      iconClassName: X_UNDO,
+      onClick: () => {
+        panel.content.activeCell.editor.undo();
+      },
+      tooltip: 'Undo Operation Button'
+    });
+  }
+
+  /**
+   * Create an insert redo operation toolbar item.
+   */
+  export function createRedoOperationButton(panel: NotebookPanel): Widget {
+    return new ToolbarButton({
+      iconClassName: X_REDO,
+      onClick: () => {
+        panel.content.activeCell.editor.redo();
+      },
+      tooltip: 'Redo Operation Button'
+    });
+  }
+
+  /**
    * Create an insert undo cell operation toolbar item.
    */
   export function createUndoCellOperationButton(panel: NotebookPanel): Widget {
     return new ToolbarButton({
-      iconClassName: TOOLBAR_INSERT_CLASS,
+      iconClassName: X_UNDO_CELL,
       onClick: () => {
         NotebookActions.undo(panel.content);
       },
@@ -144,7 +194,7 @@ export namespace ToolbarItems {
    */
   export function createRedoCellOperationButton(panel: NotebookPanel): Widget {
     return new ToolbarButton({
-      iconClassName: TOOLBAR_INSERT_CLASS,
+      iconClassName: X_REDO_CELL,
       onClick: () => {
         NotebookActions.redo(panel.content);
       },
@@ -159,7 +209,7 @@ export namespace ToolbarItems {
     panel: NotebookPanel
   ): Widget {
     return new ToolbarButton({
-      iconClassName: TOOLBAR_INSERT_CLASS,
+      iconClassName: X_SELECT_ALL,
       onClick: () => {
         NotebookActions.selectAll(panel.content);
       },
@@ -174,7 +224,7 @@ export namespace ToolbarItems {
     panel: NotebookPanel
   ): Widget {
     return new ToolbarButton({
-      iconClassName: TOOLBAR_INSERT_CLASS,
+      iconClassName: X_DESELECT_ALL,
       onClick: () => {
         NotebookActions.deselectAll(panel.content);
       },
@@ -189,7 +239,7 @@ export namespace ToolbarItems {
     panel: NotebookPanel
   ): Widget {
     return new ToolbarButton({
-      iconClassName: TOOLBAR_INSERT_CLASS,
+      iconClassName: X_DELETE,
       onClick: () => {
         NotebookActions.deleteCells(panel.content);
       },
@@ -204,7 +254,7 @@ export namespace ToolbarItems {
     panel: NotebookPanel
   ): Widget {
     return new ToolbarButton({
-      iconClassName: TOOLBAR_INSERT_CLASS,
+      iconClassName: X_MOVE_UP,
       onClick: () => {
         NotebookActions.moveUp(panel.content);
       },
@@ -219,7 +269,7 @@ export namespace ToolbarItems {
     panel: NotebookPanel
   ): Widget {
     return new ToolbarButton({
-      iconClassName: TOOLBAR_INSERT_CLASS,
+      iconClassName: X_MOVE_DOWN,
       onClick: () => {
         NotebookActions.moveDown(panel.content);
       },
@@ -234,7 +284,7 @@ export namespace ToolbarItems {
     panel: NotebookPanel
   ): Widget {
     return new ToolbarButton({
-      iconClassName: TOOLBAR_INSERT_CLASS,
+      iconClassName: X_SPLIT,
       onClick: () => {
         NotebookActions.splitCell(panel.content);
       },
@@ -249,7 +299,7 @@ export namespace ToolbarItems {
     panel: NotebookPanel
   ): Widget {
     return new ToolbarButton({
-      iconClassName: TOOLBAR_INSERT_CLASS,
+      iconClassName: X_MERGE,
       onClick: () => {
         NotebookActions.mergeCells(panel.content);
       },
@@ -264,7 +314,7 @@ export namespace ToolbarItems {
     panel: NotebookPanel
   ): Widget {
     return new ToolbarButton({
-      iconClassName: TOOLBAR_INSERT_CLASS,
+      iconClassName: X_CLEAR_OUTPUT,
       onClick: () => {
         NotebookActions.clearOutputs(panel.content);
       },
@@ -279,7 +329,7 @@ export namespace ToolbarItems {
     panel: NotebookPanel
   ): Widget {
     return new ToolbarButton({
-      iconClassName: TOOLBAR_INSERT_CLASS,
+      iconClassName: X_CLEAR_ALL_OUTPUT,
       onClick: () => {
         NotebookActions.clearAllOutputs(panel.content);
       },
@@ -292,7 +342,7 @@ export namespace ToolbarItems {
    */
   export function creatHideCodeOperationButton(panel: NotebookPanel): Widget {
     return new ToolbarButton({
-      iconClassName: TOOLBAR_INSERT_CLASS,
+      iconClassName: X_HIDE_CODE,
       onClick: () => {
         NotebookActions.hideCode(panel.content);
       },
@@ -307,7 +357,7 @@ export namespace ToolbarItems {
     panel: NotebookPanel
   ): Widget {
     return new ToolbarButton({
-      iconClassName: TOOLBAR_INSERT_CLASS,
+      iconClassName: X_HIDE_ALL_CODE,
       onClick: () => {
         NotebookActions.hideAllCode(panel.content);
       },
@@ -320,7 +370,7 @@ export namespace ToolbarItems {
    */
   export function creatShowCodeOperationButton(panel: NotebookPanel): Widget {
     return new ToolbarButton({
-      iconClassName: TOOLBAR_INSERT_CLASS,
+      iconClassName: X_SHOW_CODE,
       onClick: () => {
         NotebookActions.showCode(panel.content);
       },
@@ -335,7 +385,7 @@ export namespace ToolbarItems {
     panel: NotebookPanel
   ): Widget {
     return new ToolbarButton({
-      iconClassName: TOOLBAR_INSERT_CLASS,
+      iconClassName: X_SHOW_ALL_CODE,
       onClick: () => {
         NotebookActions.showAllCode(panel.content);
       },
@@ -348,7 +398,7 @@ export namespace ToolbarItems {
    */
   export function creatHideOutputOperationButton(panel: NotebookPanel): Widget {
     return new ToolbarButton({
-      iconClassName: TOOLBAR_INSERT_CLASS,
+      iconClassName: X_HIDE_OUTPUT,
       onClick: () => {
         NotebookActions.hideOutput(panel.content);
       },
@@ -363,7 +413,7 @@ export namespace ToolbarItems {
     panel: NotebookPanel
   ): Widget {
     return new ToolbarButton({
-      iconClassName: TOOLBAR_INSERT_CLASS,
+      iconClassName: X_HIDE_ALL_OUTPUT,
       onClick: () => {
         NotebookActions.hideAllOutputs(panel.content);
       },
@@ -376,7 +426,7 @@ export namespace ToolbarItems {
    */
   export function creatShowOutputOperationButton(panel: NotebookPanel): Widget {
     return new ToolbarButton({
-      iconClassName: TOOLBAR_INSERT_CLASS,
+      iconClassName: X_SHOW_OUTPUT,
       onClick: () => {
         NotebookActions.showOutput(panel.content);
       },
@@ -391,7 +441,7 @@ export namespace ToolbarItems {
     panel: NotebookPanel
   ): Widget {
     return new ToolbarButton({
-      iconClassName: TOOLBAR_INSERT_CLASS,
+      iconClassName: X_SHOW_ALL_OUTPUT,
       onClick: () => {
         NotebookActions.showAllOutputs(panel.content);
       },
@@ -406,7 +456,7 @@ export namespace ToolbarItems {
     panel: NotebookPanel
   ): Widget {
     return new ToolbarButton({
-      iconClassName: TOOLBAR_INSERT_CLASS,
+      iconClassName: X_TOGGLE_NUMBERING,
       onClick: () => {
         NotebookActions.toggleAllLineNumbers(panel.content);
       },
@@ -493,6 +543,14 @@ export namespace ToolbarItems {
       { name: 'cut', widget: createCutButton(panel) },
       { name: 'copy', widget: createCopyButton(panel) },
       {
+        name: 'undoOperation',
+        widget: createUndoOperationButton(panel)
+      },
+      {
+        name: 'redoOperation',
+        widget: createRedoOperationButton(panel)
+      },
+      {
         name: 'undoCellOperation',
         widget: createUndoCellOperationButton(panel)
       },
@@ -537,36 +595,36 @@ export namespace ToolbarItems {
         widget: creatClearAllOutputOperationButton(panel)
       },
       {
-        name: 'hideCode',
-        widget: creatHideCodeOperationButton(panel)
-      },
-      {
         name: 'showCode',
         widget: creatShowCodeOperationButton(panel)
       },
       {
-        name: 'hideAllCode',
-        widget: creatHideAllCodeOperationButton(panel)
+        name: 'hideCode',
+        widget: creatHideCodeOperationButton(panel)
       },
       {
         name: 'showAllCode',
         widget: creatShowAllCodeOperationButton(panel)
       },
       {
-        name: 'hideOutput',
-        widget: creatHideOutputOperationButton(panel)
+        name: 'hideAllCode',
+        widget: creatHideAllCodeOperationButton(panel)
       },
       {
         name: 'showOutput',
         widget: creatShowOutputOperationButton(panel)
       },
       {
-        name: 'hideAllOutput',
-        widget: creatHideAllOutputOperationButton(panel)
+        name: 'hideOutput',
+        widget: creatHideOutputOperationButton(panel)
       },
       {
         name: 'showAllOutput',
         widget: creatshowAllOutputOperationButton(panel)
+      },
+      {
+        name: 'hideAllOutput',
+        widget: creatHideAllOutputOperationButton(panel)
       },
       {
         name: 'toggleNumbering',
