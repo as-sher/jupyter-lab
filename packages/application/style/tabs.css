@@ -94,7 +94,7 @@
 }
 
 .p-TabBar-tab.p-mod-current:hover {
-  color: var(--jp-layout-color1);
+  color: var(--x-layout-color2);
 }
 
 .p-DockPanel-tabBar .p-TabBar.p-mod-left .p-TabBar-tab,

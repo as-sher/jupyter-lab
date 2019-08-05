@@ -275,6 +275,7 @@ function activateBrowser(
   );
 
   browser.title.iconClass = 'jp-FolderIcon jp-SideBar-tabIcon';
+  browser.title.label = 'File Browser';
   browser.title.caption = 'File Browser';
   labShell.add(browser, 'left', { rank: 100 });
 

@@ -440,6 +440,7 @@ function activateNotebookTools(
     }
   });
   notebookTools.title.iconClass = 'jp-BuildIcon jp-SideBar-tabIcon';
+  notebookTools.title.label = 'Notebook Tools';
   notebookTools.title.caption = 'Notebook Tools';
   notebookTools.id = id;
 

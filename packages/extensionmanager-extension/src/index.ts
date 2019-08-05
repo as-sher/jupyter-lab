@@ -49,6 +49,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
       const v = new ExtensionView(serviceManager);
       v.id = 'extensionmanager.main-view';
       v.title.iconClass = 'jp-ExtensionIcon jp-SideBar-tabIcon';
+      v.title.label = 'Extension Manager';
       v.title.caption = 'Extension Manager';
       if (restorer) {
         restorer.add(v, v.id);

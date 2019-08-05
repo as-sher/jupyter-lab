@@ -542,6 +542,16 @@ export namespace ToolbarItems {
       { name: 'insert', widget: createInsertButton(panel) },
       { name: 'cut', widget: createCutButton(panel) },
       { name: 'copy', widget: createCopyButton(panel) },
+      { name: 'paste', widget: createPasteButton(panel) },
+      { name: 'run', widget: createRunButton(panel) },
+      {
+        name: 'interrupt',
+        widget: Toolbar.createInterruptButton(panel.session)
+      },
+      {
+        name: 'restart',
+        widget: Toolbar.createRestartButton(panel.session)
+      },
       {
         name: 'undoOperation',
         widget: createUndoOperationButton(panel)
@@ -629,16 +639,6 @@ export namespace ToolbarItems {
       {
         name: 'toggleNumbering',
         widget: creatToggleNumberingOperationButton(panel)
-      },
-      { name: 'paste', widget: createPasteButton(panel) },
-      { name: 'run', widget: createRunButton(panel) },
-      {
-        name: 'interrupt',
-        widget: Toolbar.createInterruptButton(panel.session)
-      },
-      {
-        name: 'restart',
-        widget: Toolbar.createRestartButton(panel.session)
       },
       { name: 'cellType', widget: createCellTypeItem(panel) },
       { name: 'spacer', widget: Toolbar.createSpacerItem() },

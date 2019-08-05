@@ -32,6 +32,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
 
     tabs.id = 'tab-manager';
     tabs.title.iconClass = 'jp-TabIcon jp-SideBar-tabIcon';
+    tabs.title.label = 'Open Tabs';
     tabs.title.caption = 'Open Tabs';
     header.textContent = 'Open Tabs';
     tabs.node.insertBefore(header, tabs.contentNode);

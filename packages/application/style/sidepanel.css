@@ -8,7 +8,7 @@
 |----------------------------------------------------------------------------*/
 
 :root {
-  --jp-private-sidebar-tab-width: 32px;
+  --jp-private-sidebar-tab-width: 200px;
 }
 
 /*-----------------------------------------------------------------------------
@@ -46,6 +46,7 @@
   padding: 0 16px;
   border: none;
   overflow: visible;
+  display: grid;
 }
 
 .jp-SideBar .p-TabBar-tab.p-mod-current {
@@ -73,7 +74,8 @@
 }
 
 .jp-SideBar .p-TabBar-tabLabel {
-  line-height: var(--jp-private-sidebar-tab-width);
+  /*   line-height: var(--jp-private-sidebar-tab-width); */
+  overflow: unset;
 }
 
 .jp-SideBar .p-TabBar-tab:hover:not(.p-mod-current) {
@@ -115,6 +117,26 @@
   .p-TabBar-tab:not(.p-mod-current)
   .p-TabBar-tabIcon {
   transform: rotate(90deg);
+  height: 25px;
+  width: 25px;
+  margin: 12px 0px -37px 0px;
+}
+
+.jp-SideBar.p-TabBar.jp-mod-left
+  .p-TabBar-tab:not(.p-mod-current)
+  .p-TabBar-tabLabel {
+  transform: rotate(90deg);
+  height: 25px;
+  width: 25px;
+  margin: -5px 0px 10px -4px;
+}
+
+.jp-SideBar.p-TabBar.jp-mod-left
+  .p-TabBar-tab:not(.p-mod-current)
+  .p-TabBar-tabCloseIcon {
+  transform: rotate(90deg);
+  height: 25px;
+  width: 25px;
 }
 
 .jp-SideBar.p-TabBar.jp-mod-left .p-TabBar-tab.p-mod-current .p-TabBar-tabIcon {
@@ -123,6 +145,34 @@
       calc(-0.5 * var(--jp-border-width)),
       calc(-0.5 * var(--jp-border-width))
     );
+  height: 25px;
+  width: 25px;
+  margin: 12px 0px -37px 0px;
+}
+
+.jp-SideBar.p-TabBar.jp-mod-left
+  .p-TabBar-tab.p-mod-current
+  .p-TabBar-tabLabel {
+  transform: rotate(90deg)
+    translate(
+      calc(-0.5 * var(--jp-border-width)),
+      calc(-0.5 * var(--jp-border-width))
+    );
+  height: 25px;
+  width: 25px;
+  margin: -5px 0px 10px -4px;
+}
+
+.jp-SideBar.p-TabBar.jp-mod-left
+  .p-TabBar-tab.p-mod-current
+  .p-TabBar-tabCloseIcon {
+  transform: rotate(90deg)
+    translate(
+      calc(-0.5 * var(--jp-border-width)),
+      calc(-0.5 * var(--jp-border-width))
+    );
+  height: 25px;
+  width: 25px;
 }
 
 /* Right */

@@ -34,6 +34,7 @@ function activate(
   let running = new RunningSessions({ manager: app.serviceManager });
   running.id = 'jp-running-sessions';
   running.title.iconClass = 'jp-RunningIcon jp-SideBar-tabIcon';
+  running.title.label = 'Terminals and Kernels';
   running.title.caption = 'Running Terminals and Kernels';
 
   // Let the application restorer track the running panel for restoration of
